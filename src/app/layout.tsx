@@ -1,20 +1,19 @@
+import '@/styles/globals.css';
+
 import { Metadata } from 'next';
+import { Rubik } from 'next/font/google';
 
-import './globals.css';
-
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
+const rubik = Rubik({ subsets: ['latin'], weight: ['900', '400'] });
 
 export const metadata: Metadata = {
-  title: `TypeScript starter for Next.js by João Pedro Schmitz`,
-  description: `TypeScript starter for Next.js that includes all you need to build amazing apps`,
+  title: `THE OFFSHOP - Materiais para Cirurgia Oftalmológica`,
+  description: `Material cirúrgico oftalmológico de qualidade para o seu dia a dia`,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-br">
+      <body className={rubik.className}>{children}</body>
     </html>
   );
 }
