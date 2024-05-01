@@ -8,7 +8,10 @@ import { CategoriesBar, Content, Footer, Header } from '@/components/organisms';
 const rubik = Rubik({ subsets: ['latin'], weight: ['900', '800', '700', '600', '500', '400', '300'] });
 
 export const metadata: Metadata = {
-  title: `THE OFFSHOP - Loja da Cirurgia Oftalmológica`,
+  title: {
+    template: '%s - THE OFFSHOP',
+    default: `THE OFFSHOP - Loja da Cirurgia Oftalmológica`,
+  },
   description: `Material cirúrgico oftalmológico de qualidade para o seu dia a dia`,
 };
 

@@ -12,8 +12,7 @@ export function Header({}: HeaderProps) {
     <header className="px-4 sm:px-8 py-4 space-y-2">
       <div className="flex items-center justify-between gap-4 sm:gap-10">
         <Link href="/">
-          <h1 className="text-2xl font-black hidden sm:block">THE OFFSHOP</h1>
-          <h1 className="text-lg font-black block sm:hidden">OFFSHOP</h1>
+          <h1 className="text-lg sm:text-2xl font-black">THE OFFSHOP</h1>
         </Link>
         <div className="hidden sm:flex grow justify-center max-w-2xl">
           <SearchForm />
