@@ -6,7 +6,7 @@ interface ProductCardBuyNowProps extends LinkProps {
 
 export function ProductCardBuyNow({ href, ...rest }: ProductCardBuyNowProps) {
   return (
-    <Link className="btn btn-primary" href={href} {...rest}>
+    <Link className="btn btn-primary" href={href} target="_blank" {...rest}>
       Compre agora
     </Link>
   );

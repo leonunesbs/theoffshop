@@ -3,6 +3,7 @@ import { ProductCardBuyNow } from './ProductCardBuyNow';
 import { ProductCardContent } from './ProductCardContent';
 import { ProductCardDescription } from './ProductCardDescription';
 import { ProductCardImage } from './ProductCardImage';
+import { ProductCardPrice } from './ProductCardPrice';
 import { ProductCardRoot } from './ProductCardRoot';
 import { ProductCardTitle } from './ProductCardTitle';
 
@@ -14,4 +15,5 @@ export const ProductCard = {
   Description: ProductCardDescription,
   Actions: ProductCardActions,
   BuyNow: ProductCardBuyNow,
+  Price: ProductCardPrice,
 };
