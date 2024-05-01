@@ -7,8 +7,10 @@ interface ProductCardDescriptionProps {
 export function ProductCardDescription({ children }: ProductCardDescriptionProps) {
   return (
     <>
-      <p className="text-lg font-extrabold">R$ 580</p>
-      <p>{children}</p>
+      <span className="text-lg font-extrabold">R$ 580</span>
+      <p role="contentinfo" className="line-clamp-4">
+        {children}
+      </p>
     </>
   );
 }

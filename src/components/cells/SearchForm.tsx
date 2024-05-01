@@ -14,9 +14,20 @@ export function SearchForm({}: SearchFormProps) {
   };
   return (
     <form action={onSubmit} className="flex grow">
-      <label className="input input-bordered items-center gap-2 grow flex">
-        <input type="text" placeholder="busque aqui seu material cirúrgico" className="grow" name="searchString" />
-        <button type="submit">
+      <label
+        htmlFor="searchString"
+        className="input input-bordered items-center pr-0 gap-2 grow flex join"
+        aria-label="Digite aqui a sua busca"
+      >
+        <input
+          type="text"
+          placeholder="busque aqui seu material cirúrgico"
+          aria-placeholder="busque aqui seu material cirúrgico"
+          className="grow join-item"
+          name="searchString"
+          id="searchString"
+        />
+        <button type="submit" className="join-item btn btn-ghost" aria-label="buscar">
           <svg
             viewBox="0 0 31.5 31.5"
             aria-labelledby="searchIcon searchDesc"
