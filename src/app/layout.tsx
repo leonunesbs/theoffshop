@@ -19,13 +19,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={className}>
         <Header />
         <CategoriesBar.Root>
-          <CategoriesBar.Item href="/">Kit Pterígio</CategoriesBar.Item>
-          <CategoriesBar.Item href="/">Kit Catarata</CategoriesBar.Item>
-          <CategoriesBar.Item href="/">Kit Retirada de pontos</CategoriesBar.Item>
-          <CategoriesBar.Item href="/">Pinças</CategoriesBar.Item>
-          <CategoriesBar.Item href="/">Porta agulhas</CategoriesBar.Item>
-          <CategoriesBar.Item href="/">Tesouras</CategoriesBar.Item>
-          <CategoriesBar.Item href="/">Especiais</CategoriesBar.Item>
+          <CategoriesBar.Item href="/kits-pterigio">Kits Pterígio</CategoriesBar.Item>
+          <CategoriesBar.Item href="/kits-catarata">Kit Catarata</CategoriesBar.Item>
+          <CategoriesBar.Item href="/pincas">Pinças</CategoriesBar.Item>
+          <CategoriesBar.Item href="/porta-agulhas">Porta agulhas</CategoriesBar.Item>
+          <CategoriesBar.Item href="/tesouras">Tesouras</CategoriesBar.Item>
+          <CategoriesBar.Item href="/especiais">Especiais</CategoriesBar.Item>
         </CategoriesBar.Root>
         <Content>{children}</Content>
         <Footer />

@@ -5,5 +5,10 @@ interface ProductCardDescriptionProps {
 }
 
 export function ProductCardDescription({ children }: ProductCardDescriptionProps) {
-  return <p>{children}</p>;
+  return (
+    <>
+      <p className="text-lg font-extrabold">R$ 580</p>
+      <p>{children}</p>
+    </>
+  );
 }

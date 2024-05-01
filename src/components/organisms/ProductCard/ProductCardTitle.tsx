@@ -3,5 +3,5 @@ interface ProductCardTitleProps {
 }
 
 export function ProductCardTitle({ title }: ProductCardTitleProps) {
-  return <h2 className="card-title">{title}</h2>;
+  return <h3 className="card-title font-semibold">{title}</h3>;
 }

@@ -5,5 +5,5 @@ interface ContentProps {
 }
 
 export function Content({ children }: ContentProps) {
-  return <div className="p-4 sm:p-12">{children}</div>;
+  return <div className="px-4 py-10 sm:p-12 min-h-screen">{children}</div>;
 }
