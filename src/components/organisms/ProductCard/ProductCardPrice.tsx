@@ -3,5 +3,5 @@ interface ProductCardPriceProps {
 }
 
 export function ProductCardPrice({ price }: ProductCardPriceProps) {
-  return <span className="text-lg font-extrabold">R$ {price}</span>;
+  return <span className="text-2xl font-extrabold">R$ {price}</span>;
 }
