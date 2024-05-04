@@ -5,3 +5,12 @@ export function normalizeText(text: string) {
     .replace(/[^a-z0-9]/gi, '') // Remove caracteres não alfanuméricos
     .toLowerCase(); // Converte para minúsculo
 }
+
+export const categories = [
+  { href: '/kit-pterigio', slug: 'kit-pterigio', title: 'Kits Pterígio' },
+  { href: '/kit-catarata', slug: 'kit-catarata', title: 'Kits Catarata' },
+  { href: '/pincas', slug: 'pincas', title: 'Pinças' },
+  { href: '/porta-agulhas', slug: 'porta-agulhas', title: 'Porta agulhas' },
+  { href: '/tesouras', slug: 'tesouras', title: 'Tesouras' },
+  { href: '/especiais', slug: 'especiais', title: 'Especiais' },
+];

@@ -6,8 +6,8 @@ interface ProductCardDescriptionProps {
 
 export function ProductCardDescription({ children }: ProductCardDescriptionProps) {
   return (
-    <p role="contentinfo" className="line-clamp-4">
+    <div role="contentinfo" className="line-clamp-4 prose">
       {children}
-    </p>
+    </div>
   );
 }
