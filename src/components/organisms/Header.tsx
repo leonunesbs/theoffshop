@@ -19,9 +19,9 @@ export function Header({}: HeaderProps) {
         </div>
 
         <div className="flex">
-          <button type="button">Btn</button>
-          <button type="button">Btn</button>
-          <button type="button">Btn</button>
+          <Link href="/" className="btn btn-primary btn-sm">
+            Informações
+          </Link>
         </div>
       </div>
       <div className="flex sm:hidden grow justify-center max-w-2xl">

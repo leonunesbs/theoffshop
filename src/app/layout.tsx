@@ -2,7 +2,6 @@ import '@/styles/globals.css';
 
 import { Metadata, Viewport } from 'next';
 import { Rubik } from 'next/font/google';
-import Link from 'next/link';
 
 import { CategoriesBar, Content, Footer, Header } from '@/components/organisms';
 
@@ -105,11 +104,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-br">
       <body className={className}>
-        <div className="flex justify-center bg-base-300 dark:bg-white text-base-300">
+        {/* <div className="flex justify-center bg-base-300 dark:bg-white text-base-300">
           <Link className="btn btn-link btn-sm no-underline" href={'/'}>
             Acesse aqui nosso guia de compras!
           </Link>
-        </div>
+        </div> */}
         <Header />
         <CategoriesBar.Root>
           <CategoriesBar.Item href="?category=kit-pterigio">Kits Pterígio</CategoriesBar.Item>
