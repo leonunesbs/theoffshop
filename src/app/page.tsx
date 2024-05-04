@@ -83,9 +83,7 @@ export default function Home({
             </div>
             <ProductCard.Content>
               <ProductCard.Title title={name} />
-              <ProductCard.Description>
-                <div dangerouslySetInnerHTML={{ __html: description }}></div>
-              </ProductCard.Description>
+              <ProductCard.Description>{description}</ProductCard.Description>
               <div className="flex justify-between">
                 <Image src="aliexpress_logo.svg" alt="Aliexpress Logo" width={80} height={30} />
                 <ProductCard.Actions>

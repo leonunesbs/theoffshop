@@ -14,12 +14,7 @@ export const metadata: Metadata = {
     default: `THE OFFSHOP - Loja da Cirurgia Oftalmológica`,
   },
   description: `Material cirúrgico oftalmológico de qualidade para o seu dia a dia`,
-  category: 'technology',
-  robots: {
-    index: false,
-    follow: true,
-    nocache: true,
-  },
+  category: 'ecommerce',
   generator: '@leonunesbs',
   applicationName: `THE OFFSHOP - Loja da Cirurgia Oftalmológica`,
   referrer: 'origin-when-cross-origin',
@@ -40,6 +35,10 @@ export const metadata: Metadata = {
   authors: [{ name: 'Leonardo Nunes', url: 'https://github.com/leonunesbs' }],
   creator: 'Leonardo Nunes',
   publisher: 'Leonardo Nunes',
+  metadataBase: new URL('https://theoffshop.com.br'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'THE OFFSHOP - Loja da Cirurgia Oftalmológica',
     description: `Material cirúrgico oftalmológico de qualidade para o seu dia a dia.`,
@@ -47,7 +46,7 @@ export const metadata: Metadata = {
     siteName: `THE OFFSHOP`,
     images: [
       {
-        url: 'https://theoffshop.com.br/favicon/apple-touch-icon.png',
+        url: '/favicon/apple-touch-icon.png',
         width: 180,
         height: 180,
       },
@@ -82,6 +81,7 @@ export const metadata: Metadata = {
     title: 'THE OFFSHOP',
     statusBarStyle: 'black-translucent',
   },
+
   other: {
     applicationName: 'THE OFFSHOP',
     msapplicationTileColor: '#ebebeb',
