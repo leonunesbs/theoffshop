@@ -22,7 +22,9 @@ export default function Home({
       })
     : mainCatalog;
 
-  const catalog = searchParams?.search ? filteredCatalog : mainCatalog;
+  const catalog = (searchParams?.search ? filteredCatalog : mainCatalog).sort((a, b) => {
+    return normalizeText(a.name).localeCompare(normalizeText(b.name));
+  });
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {catalog.map(({ id, name, imageUrls, productUrl }) => (
