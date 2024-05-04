@@ -10,7 +10,7 @@ export function SearchForm({}: SearchFormProps) {
     'use server';
     const searchString = formData.get('searchString');
     if (!searchString) return;
-    redirect(`?q=${searchString}`);
+    redirect(`/?search=${searchString}`);
   };
   return (
     <form action={onSubmit} className="flex grow">
