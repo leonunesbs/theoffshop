@@ -1,4 +1,7 @@
+import Image from 'next/image';
+
 import { ProductCard } from '@/components/organisms';
+import { normalizeText } from '@/libs/utils';
 import mainCatalog from '@/public/catalog.json';
 
 export default function Home({
@@ -8,16 +11,6 @@ export default function Home({
     search: string;
   };
 }) {
-  // Função para normalizar strings removendo espaços, acentos e caracteres especiais
-  function normalizeText(text: string) {
-    return text
-      .normalize('NFD') // Normaliza a string para a forma de decomposição canônica
-      .replace(/[\u0300-\u036f]/g, '') // Remove acentos
-      .replace(/[^a-z0-9]/gi, '') // Remove caracteres não alfanuméricos
-      .toLowerCase(); // Converte para minúsculo
-  }
-
-  // Filtragem do catálogo com a função de normalização
   const filteredCatalog = searchParams?.search
     ? mainCatalog.filter((product) => {
         const normalizedSearch = normalizeText(searchParams.search);
@@ -32,15 +25,22 @@ export default function Home({
   const catalog = searchParams?.search ? filteredCatalog : mainCatalog;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      {catalog.map(({ id, name, imageUrl, price, productUrl }) => (
+      {catalog.map(({ id, name, imageUrls, productUrl }) => (
         <ProductCard.Root key={id}>
-          <ProductCard.Image src={imageUrl} alt={name} />
+          <div className="carousel w-full h-80 bg-white">
+            {imageUrls.map((src) => (
+              <ProductCard.Image key={src} src={src} alt={name} />
+            ))}
+          </div>
           <ProductCard.Content>
             <ProductCard.Title title={name} />
-            <ProductCard.Price price={price} />
-            <ProductCard.Actions>
-              <ProductCard.BuyNow href={productUrl} />
-            </ProductCard.Actions>
+            {/* <ProductCard.Price price={price} /> */}
+            <div className="flex justify-between">
+              <Image src="aliexpress_logo.svg" alt="Aliexpress Logo" width={80} height={30} />
+              <ProductCard.Actions>
+                <ProductCard.BuyNow href={productUrl} />
+              </ProductCard.Actions>
+            </div>
           </ProductCard.Content>
         </ProductCard.Root>
       ))}

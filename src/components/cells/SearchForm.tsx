@@ -9,7 +9,7 @@ export function SearchForm({}: SearchFormProps) {
   const onSubmit = async (formData: FormData) => {
     'use server';
     const searchString = formData.get('searchString');
-    if (!searchString) return;
+    if (!searchString) redirect('/');
     redirect(`/?search=${searchString}`);
   };
   return (

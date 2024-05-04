@@ -8,6 +8,11 @@ const nextConfig = {
         hostname: 'daisyui.com',
         port: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'ae01.alicdn.com',
+        port: '',
+      },
     ],
   },
 };

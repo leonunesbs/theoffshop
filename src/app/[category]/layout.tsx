@@ -3,8 +3,8 @@ import { Metadata } from 'next';
 const titles: {
   [key: string]: string;
 } = {
-  'kits-pterigio': 'Kits Pterígio',
-  'kits-catarata': 'Kits Catarata',
+  'kit-pterigio': 'Kits Pterígio',
+  'kit-catarata': 'Kits Catarata',
   pincas: 'Pinças',
   'porta-agulhas': 'Porta agulhas',
   tesouras: 'Tesouras',

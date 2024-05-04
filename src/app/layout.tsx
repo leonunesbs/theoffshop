@@ -28,8 +28,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </div>
         <Header />
         <CategoriesBar.Root>
-          <CategoriesBar.Item href="/kits-pterigio">Kits Pterígio</CategoriesBar.Item>
-          <CategoriesBar.Item href="/kits-catarata">Kits Catarata</CategoriesBar.Item>
+          <CategoriesBar.Item href="/kit-pterigio">Kits Pterígio</CategoriesBar.Item>
+          <CategoriesBar.Item href="/kit-catarata">Kits Catarata</CategoriesBar.Item>
           <CategoriesBar.Item href="/pincas">Pinças</CategoriesBar.Item>
           <CategoriesBar.Item href="/porta-agulhas">Porta agulhas</CategoriesBar.Item>
           <CategoriesBar.Item href="/tesouras">Tesouras</CategoriesBar.Item>
