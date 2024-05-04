@@ -1,0 +1,24 @@
+{
+    "name": "THE OFFSHOP - Loja da Cirurgia Oftalmológica",
+    "short_name": "THE OFFSHOP",
+    "icons": [
+        {
+            "src": "/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon/safari-pinned-tab.svg",
+            "sizes": "192x192",
+            "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#ededed",
+    "background_color": "#ededed",
+    "display": "standalone"
+}

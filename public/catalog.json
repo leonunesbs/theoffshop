@@ -4,7 +4,7 @@
     "name": "Kit Pterígio 1",
     "imageUrls": ["https://ae01.alicdn.com/kf/Hb96dece809c34445a81847497c5c51f5S/Titanium-Alloy-Instrumentos-Cir-rgicos-Oft-lmica-Microcir-rgica-Instrumentos-Odontol-gicos-Porta-agulhas-11-5.jpg_400x400.jpg_.webp"],
     "price": 99,
-    "categories": ["kit-pterigio"],
+    "categories": ["kit-pterigio", "kits"],
     "productUrl": "https://s.click.aliexpress.com/e/_DBLloj1"
   },
   {
@@ -12,7 +12,7 @@
     "name": "Kit Pterígio 2",
     "imageUrls": ["https://ae01.alicdn.com/kf/S5fb965d03f094f5783b38f08ac21e5765.jpg_400x400.jpg","https://ae01.alicdn.com/kf/S8b8e074f5bcc4cfb979c1daba5e84caa4/Tit-nio-Ophthalmic-Instrumento-Set-Forcep-Agulha-Titular-Silicone-Esteriliza-o-Bandeja-Tesoura-4pcs.jpg_400x400.jpg_.webp", "https://ae01.alicdn.com/kf/Sb82add67917e46b39a6c7ba7a4671f3eb/Tit-nio-Ophthalmic-Instrumento-Set-Forcep-Agulha-Titular-Silicone-Esteriliza-o-Bandeja-Tesoura-4pcs.jpg_400x400.jpg_.webp"],
     "price": 258.19,
-    "categories": ["kit-pterigio"],
+    "categories": ["kit-pterigio", "kits", "caixa"],
     "productUrl": "https://s.click.aliexpress.com/e/_DCBdoxh"
   },
   {
@@ -20,7 +20,7 @@
     "name": "Kit Pterígio 3",
     "imageUrls": ["https://ae01.alicdn.com/kf/H26a8914df86b4bae9a30ac5074fcc358R/A-o-Inoxid-vel-Instrumentos-Microcir-rgicos-12-5-cm-Tesoura-Porta-Agulhas-Pin-as-Ferramenta.jpg_400x400.jpg_.webp"],
     "price": 99,
-    "categories": ["kit-pterigio"],
+    "categories": ["kit-pterigio", "kits"],
     "productUrl": "https://s.click.aliexpress.com/e/_DBMjS3t"
   },
   {
@@ -28,7 +28,7 @@
     "name": "Kit Pterígio 4",
     "imageUrls": ["https://ae01.alicdn.com/kf/S08485f0b84eb4268953d269527b7af5dl/Ophthalmic-Micro-Cirurgia-Tesoura-Suporte-da-agulha-Pin-a-A-o-inoxid-vel-Ferramentas-de-p.jpg_400x400.webp"],
     "price": 99,
-    "categories": ["kit-pterigio"],
+    "categories": ["kit-pterigio", "kits", "caixa"],
     "productUrl": "https://s.click.aliexpress.com/e/_DkBiIsx"
   }
 ]

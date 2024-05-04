@@ -63,7 +63,7 @@ export default function Home({
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map(({ id, name, imageUrls, productUrl }) => (
           <ProductCard.Root key={id}>
-            <div className="carousel w-full h-80 bg-white">
+            <div className="carousel w-full bg-white h-[300px]">
               {imageUrls.map((src) => (
                 <ProductCard.Image key={src} src={src} alt={name} />
               ))}
