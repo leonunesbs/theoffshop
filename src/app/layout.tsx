@@ -4,6 +4,7 @@ import { Metadata, Viewport } from 'next';
 import { Rubik } from 'next/font/google';
 
 import { CategoriesBar, Content, Footer, Header } from '@/components/organisms';
+import { categories } from '@/libs/utils';
 
 const rubik = Rubik({ subsets: ['latin'], weight: ['900', '800', '700', '600', '500', '400', '300'] });
 
@@ -102,7 +103,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const className = rubik.className;
   return (
-    <html lang="pt-br">
+    <html lang="pt-BR">
       <body className={className}>
         {/* <div className="flex justify-center bg-base-300 dark:bg-white text-base-300">
           <Link className="btn btn-link btn-sm no-underline" href={'/'}>
@@ -111,12 +112,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </div> */}
         <Header />
         <CategoriesBar.Root>
-          <CategoriesBar.Item href="?category=kit-pterigio">Kits Pterígio</CategoriesBar.Item>
-          <CategoriesBar.Item href="?category=kit-catarata">Kits Catarata</CategoriesBar.Item>
-          <CategoriesBar.Item href="?category=pincas">Pinças</CategoriesBar.Item>
-          <CategoriesBar.Item href="?category=porta-agulhas">Porta agulhas</CategoriesBar.Item>
-          <CategoriesBar.Item href="?category=tesouras">Tesouras</CategoriesBar.Item>
-          <CategoriesBar.Item href="?category=especiais">Especiais</CategoriesBar.Item>
+          {categories.map((category) => (
+            <CategoriesBar.Item key={category.slug} href={category.href}>
+              {category.title}
+            </CategoriesBar.Item>
+          ))}
         </CategoriesBar.Root>
         <Content>{children}</Content>
         <Footer />

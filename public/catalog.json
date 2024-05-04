@@ -30,6 +30,70 @@
     "price": 99,
     "categories": ["kit-pterigio", "kits", "caixa"],
     "productUrl": "https://s.click.aliexpress.com/e/_DkBiIsx"
+  },
+  {
+    "id": 5,
+    "name": "Lâmina corneana 1",
+    "imageUrls": ["https://ae01.alicdn.com/kf/S0f9388ce96ee4f52a10f7f2803aaf3c0g/Oft-lmica-safira-ceratome-l-minas-lente-dupla-cotovelo-l-mina-faca-1-conjunto.jpg_400x400.jpg_.webp"],
+    "price": 99,
+    "categories": ["laminas", "safira", "bisturi", "catarata", "cornea"],
+    "productUrl": "https://s.click.aliexpress.com/e/_DmfegPp"
+  },
+  {
+    "id": 6,
+    "name": "Lâmina corneana 2",
+    "imageUrls": ["https://ae01.alicdn.com/kf/He317673e6d7544cf98d45dd549f15ca2K/L-mina-trifaceta-da-l-mina-da-c-rnea-clara-do-keratome-l-minas-oft-lmicas.jpg_400x400.jpg_.webp"],
+    "price": 99,
+    "categories": ["laminas", "safira", "bisturi", "catarata", "cornea"],
+    "productUrl": "https://s.click.aliexpress.com/e/_DdW02G3"
+  },
+  {
+    "id": 6,
+    "name": "Lâmina corneana 3",
+    "imageUrls": ["https://ae01.alicdn.com/kf/H78395d037951408d8573319ce92df2d5V/Conjunto-de-facas-para-cotovelo-oft-lmico-com-l-mina-dupla-diamante-preto-l-mina-oft.jpg_400x400.jpg_.webp"],
+    "price": 99,
+    "categories": ["laminas", "safira", "bisturi", "catarata", "cornea"],
+    "productUrl": "https://s.click.aliexpress.com/e/_Dky06MT"
+  },
+  {
+    "id": 7,
+    "name": "Lâmina corneana 4",
+    "imageUrls": ["https://ae01.alicdn.com/kf/Sb28cd883618a4a8f9b9b9f26ee9b69a4q/L-minas-De-Faca-Cir-rgica-Micro-Instrumentos-De-Microcirurgia-Oft-lmica-1Pc.jpg_400x400.jpg_.webp"],
+    "price": 99,
+    "categories": ["laminas", "bisturi", "catarata", "cornea"],
+    "productUrl": "https://s.click.aliexpress.com/e/_DnC9TqL"
+  },
+  {
+    "id": 8,
+    "name": "Kit Catarata 1",
+    "imageUrls": ["https://ae01.alicdn.com/kf/S307488b28ce247a8ba7858d3f4eef799E.jpg_400x400.jpg"],
+    "price": 99,
+    "categories": ["kit-catarata", "kits", "catarata"],
+    "productUrl": "https://s.click.aliexpress.com/e/_DEi1YaP"
+  },
+  {
+    "id": 9,
+    "name": "Kit Catarata 2",
+    "imageUrls": ["https://ae01.alicdn.com/kf/Sa3fd19815ed34a068ab6c6b7f87ff481d.jpg_400x400.jpg"],
+    "price": 99,
+    "categories": ["kit-catarata", "kits", "catarata"],
+    "productUrl": "https://s.click.aliexpress.com/e/_DDMqqjp"
+  },
+  {
+    "id": 10,
+    "name": "Kit Catarata 3",
+    "imageUrls": ["https://ae01.alicdn.com/kf/Sace5609cd57d407ab2b56b30f298920aH.jpg_400x400.jpg"],
+    "price": 99,
+    "categories": ["kit-catarata", "kits", "catarata"],
+    "productUrl": "https://s.click.aliexpress.com/e/_DlyhA0b"
+  },
+  {
+    "id": 11,
+    "name": "Kit Catarata 4",
+    "imageUrls": ["https://ae01.alicdn.com/kf/S5a17ef38467d42cfba0eab47bd8b7f34V.jpg_400x400.jpg"],
+    "price": 99,
+    "categories": ["kit-catarata", "kits", "catarata"],
+    "productUrl": "https://s.click.aliexpress.com/e/_DlkCJfH"
   }
 ]
 

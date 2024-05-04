@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Metadata } from 'next/types';
 
 import { ProductCard } from '@/components/organisms';
@@ -11,6 +12,7 @@ export async function generateMetadata({
   searchParams?: {
     search: string;
     category: string;
+    page?: number;
   };
 }): Promise<Metadata> {
   if (searchParams?.category) {
@@ -32,8 +34,12 @@ export default function Home({
   searchParams?: {
     search: string;
     category: string;
+    page: number;
   };
 }) {
+  const itemsPerPage = 12;
+  const page = parseInt(searchParams?.page?.toString() || '1');
+
   const filteredCatalog = searchParams?.search
     ? mainCatalog.filter((product) => {
         const normalizedSearch = normalizeText(searchParams.search);
@@ -52,6 +58,13 @@ export default function Home({
     ? catalog.filter(({ categories }) => categories.includes(searchParams?.category))
     : catalog;
 
+  const totalPages = Math.ceil(products.length / itemsPerPage);
+  const startIndex = (page - 1) * itemsPerPage;
+  const selectedProducts = products.slice(startIndex, startIndex + itemsPerPage);
+
+  const nextPage = page + 1;
+  const prevPage = page - 1;
+
   return (
     <section>
       <h2 className="text-2xl font-semibold text-center mb-8">
@@ -60,8 +73,8 @@ export default function Home({
       {searchParams?.search && (
         <p className="mb-4">Mostrando resultados de busca: &ldquo;{searchParams.search}&rdquo;</p>
       )}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {products.map(({ id, name, imageUrls, productUrl }) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+        {selectedProducts.map(({ id, name, imageUrls, productUrl }) => (
           <ProductCard.Root key={id}>
             <div className="carousel w-full bg-base-300 h-[300px]">
               {imageUrls.map((src) => (
@@ -70,7 +83,6 @@ export default function Home({
             </div>
             <ProductCard.Content>
               <ProductCard.Title title={name} />
-              {/* <ProductCard.Price price={price} /> */}
               <ProductCard.Description>
                 <p>Teste</p>
                 <p>Teste</p>
@@ -84,12 +96,41 @@ export default function Home({
             </ProductCard.Content>
           </ProductCard.Root>
         ))}
-        {products.length == 0 && (
-          <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 text-center">
-            <i>Nenhum produto encontrado com esse filtro.</i>
-          </div>
-        )}
       </div>
+      {totalPages > 1 && (
+        <div className="join flex justify-center">
+          {page > 1 ? (
+            <Link
+              href={`?${searchParams?.category ? `category=${searchParams.category}&` : ''}${searchParams?.search ? `search=${searchParams.search}&` : ''}page=${prevPage}`}
+              className={'join-item btn btn-ghost'}
+            >
+              «
+            </Link>
+          ) : (
+            <Link href={'/'} className={'join-item btn btn-ghost invisibleg'}>
+              «
+            </Link>
+          )}
+          <button className="join-item btn btn-ghost">Pág. {page}</button>
+          {page < totalPages ? (
+            <Link
+              href={`?${searchParams?.category ? `category=${searchParams.category}&` : ''}${searchParams?.search ? `search=${searchParams.search}&` : ''}page=${nextPage}`}
+              className="join-item btn btn-ghost"
+            >
+              »
+            </Link>
+          ) : (
+            <Link href={'/'} className={'join-item btn btn-ghost invisibleg'}>
+              »
+            </Link>
+          )}
+        </div>
+      )}
+      {selectedProducts.length == 0 && (
+        <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 text-center">
+          <i>Nenhum produto encontrado com esse filtro.</i>
+        </div>
+      )}
     </section>
   );
 }
