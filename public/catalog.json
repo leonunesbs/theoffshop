@@ -2,6 +2,7 @@
   {
     "id": 2,
     "name": "Kit Pterígio 1",
+    "description": "<p>Kit pterígio com pinças, tesoura e porta agulha.</p>",
     "imageUrls": ["https://ae01.alicdn.com/kf/Hb96dece809c34445a81847497c5c51f5S/Titanium-Alloy-Instrumentos-Cir-rgicos-Oft-lmica-Microcir-rgica-Instrumentos-Odontol-gicos-Porta-agulhas-11-5.jpg_400x400.jpg_.webp"],
     "price": 99,
     "categories": ["kit-pterigio", "kits"],
@@ -10,6 +11,7 @@
   {
     "id": 1,
     "name": "Kit Pterígio 2",
+    "description": "<p>Kit pterígio com pinças, tesoura, porta agulha e caixa para esterelização.</p>",
     "imageUrls": ["https://ae01.alicdn.com/kf/S5fb965d03f094f5783b38f08ac21e5765.jpg_400x400.jpg","https://ae01.alicdn.com/kf/S8b8e074f5bcc4cfb979c1daba5e84caa4/Tit-nio-Ophthalmic-Instrumento-Set-Forcep-Agulha-Titular-Silicone-Esteriliza-o-Bandeja-Tesoura-4pcs.jpg_400x400.jpg_.webp", "https://ae01.alicdn.com/kf/Sb82add67917e46b39a6c7ba7a4671f3eb/Tit-nio-Ophthalmic-Instrumento-Set-Forcep-Agulha-Titular-Silicone-Esteriliza-o-Bandeja-Tesoura-4pcs.jpg_400x400.jpg_.webp"],
     "price": 258.19,
     "categories": ["kit-pterigio", "kits", "caixa"],
@@ -18,6 +20,7 @@
   {
     "id": 3,
     "name": "Kit Pterígio 3",
+    "description": "<p>Kit pterígio com pinças, tesouras e porta agulhas.</p>",
     "imageUrls": ["https://ae01.alicdn.com/kf/H26a8914df86b4bae9a30ac5074fcc358R/A-o-Inoxid-vel-Instrumentos-Microcir-rgicos-12-5-cm-Tesoura-Porta-Agulhas-Pin-as-Ferramenta.jpg_400x400.jpg_.webp"],
     "price": 99,
     "categories": ["kit-pterigio", "kits"],
@@ -26,6 +29,7 @@
   {
     "id": 4,
     "name": "Kit Pterígio 4",
+    "description": "<p>Kit pterígio com pinças, tesouras, porta agulhas e caixa para esterelização.</p>",
     "imageUrls": ["https://ae01.alicdn.com/kf/S08485f0b84eb4268953d269527b7af5dl/Ophthalmic-Micro-Cirurgia-Tesoura-Suporte-da-agulha-Pin-a-A-o-inoxid-vel-Ferramentas-de-p.jpg_400x400.webp"],
     "price": 99,
     "categories": ["kit-pterigio", "kits", "caixa"],
@@ -34,6 +38,7 @@
   {
     "id": 5,
     "name": "Lâmina corneana 1",
+    "description": "<p>Lâmina para incisão corneana, vários tamanhos.</p>",
     "imageUrls": ["https://ae01.alicdn.com/kf/S0f9388ce96ee4f52a10f7f2803aaf3c0g/Oft-lmica-safira-ceratome-l-minas-lente-dupla-cotovelo-l-mina-faca-1-conjunto.jpg_400x400.jpg_.webp"],
     "price": 99,
     "categories": ["laminas", "safira", "bisturi", "catarata", "cornea"],
@@ -42,6 +47,7 @@
   {
     "id": 6,
     "name": "Lâmina corneana 2",
+    "description": "<p>Lâmina para incisão corneana, vários tamanhos.</p>",
     "imageUrls": ["https://ae01.alicdn.com/kf/He317673e6d7544cf98d45dd549f15ca2K/L-mina-trifaceta-da-l-mina-da-c-rnea-clara-do-keratome-l-minas-oft-lmicas.jpg_400x400.jpg_.webp"],
     "price": 99,
     "categories": ["laminas", "safira", "bisturi", "catarata", "cornea"],
@@ -50,6 +56,7 @@
   {
     "id": 6,
     "name": "Lâmina corneana 3",
+    "description": "<p>Lâmina para incisão corneana, vários tamanhos.</p>",
     "imageUrls": ["https://ae01.alicdn.com/kf/H78395d037951408d8573319ce92df2d5V/Conjunto-de-facas-para-cotovelo-oft-lmico-com-l-mina-dupla-diamante-preto-l-mina-oft.jpg_400x400.jpg_.webp"],
     "price": 99,
     "categories": ["laminas", "safira", "bisturi", "catarata", "cornea"],
@@ -58,6 +65,7 @@
   {
     "id": 7,
     "name": "Lâmina corneana 4",
+    "description": "<p>Lâmina para incisão corneana, vários tamanhos.</p>",
     "imageUrls": ["https://ae01.alicdn.com/kf/Sb28cd883618a4a8f9b9b9f26ee9b69a4q/L-minas-De-Faca-Cir-rgica-Micro-Instrumentos-De-Microcirurgia-Oft-lmica-1Pc.jpg_400x400.jpg_.webp"],
     "price": 99,
     "categories": ["laminas", "bisturi", "catarata", "cornea"],
@@ -66,6 +74,7 @@
   {
     "id": 8,
     "name": "Kit Catarata 1",
+    "description": "<p>Kit para cirurgia de catarata, várias peças.</p>",
     "imageUrls": ["https://ae01.alicdn.com/kf/S307488b28ce247a8ba7858d3f4eef799E.jpg_400x400.jpg"],
     "price": 99,
     "categories": ["kit-catarata", "kits", "catarata"],
@@ -74,6 +83,7 @@
   {
     "id": 9,
     "name": "Kit Catarata 2",
+    "description": "<p>Kit para cirurgia de catarata, várias peças.</p>",
     "imageUrls": ["https://ae01.alicdn.com/kf/Sa3fd19815ed34a068ab6c6b7f87ff481d.jpg_400x400.jpg"],
     "price": 99,
     "categories": ["kit-catarata", "kits", "catarata"],
@@ -82,6 +92,7 @@
   {
     "id": 10,
     "name": "Kit Catarata 3",
+    "description": "<p>Kit para cirurgia de catarata, várias peças.</p>",
     "imageUrls": ["https://ae01.alicdn.com/kf/Sace5609cd57d407ab2b56b30f298920aH.jpg_400x400.jpg"],
     "price": 99,
     "categories": ["kit-catarata", "kits", "catarata"],
@@ -90,6 +101,7 @@
   {
     "id": 11,
     "name": "Kit Catarata 4",
+    "description": "<p>Kit para cirurgia de catarata, várias peças.</p>",
     "imageUrls": ["https://ae01.alicdn.com/kf/S5a17ef38467d42cfba0eab47bd8b7f34V.jpg_400x400.jpg"],
     "price": 99,
     "categories": ["kit-catarata", "kits", "catarata"],

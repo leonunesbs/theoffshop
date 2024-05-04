@@ -74,7 +74,7 @@ export default function Home({
         <p className="mb-4">Mostrando resultados de busca: &ldquo;{searchParams.search}&rdquo;</p>
       )}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
-        {selectedProducts.map(({ id, name, imageUrls, productUrl }) => (
+        {selectedProducts.map(({ id, name, imageUrls, productUrl, description }) => (
           <ProductCard.Root key={id}>
             <div className="carousel w-full bg-base-300 h-[300px]">
               {imageUrls.map((src) => (
@@ -84,8 +84,7 @@ export default function Home({
             <ProductCard.Content>
               <ProductCard.Title title={name} />
               <ProductCard.Description>
-                <p>Teste</p>
-                <p>Teste</p>
+                <div dangerouslySetInnerHTML={{ __html: description }}></div>
               </ProductCard.Description>
               <div className="flex justify-between">
                 <Image src="aliexpress_logo.svg" alt="Aliexpress Logo" width={80} height={30} />
