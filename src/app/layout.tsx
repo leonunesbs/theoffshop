@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'THE OFFSHOP - Loja da Cirurgia Oftalmológica',
-    description: `Encontre materiais cirúrgicos oftalmológicos de qualidade para sua rotina diária..`,
+    description: `Encontre materiais cirúrgicos oftalmológicos de qualidade para sua rotina diária.`,
     url: 'https://theoffshop.com.br',
     siteName: `THE OFFSHOP`,
     images: [
