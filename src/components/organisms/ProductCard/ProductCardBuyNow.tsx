@@ -14,7 +14,7 @@ export function ProductCardBuyNow({ href, productTitle, ...rest }: ProductCardBu
       className="btn btn-primary"
       href={href}
       target="_blank"
-      onClick={() => sendGAEvent({ event: 'buttonClicked', value: `Buy now: ${productTitle}` })}
+      onClick={() => sendGAEvent({ event: 'generate_lead', value: `Buy now: ${productTitle}` })}
       {...rest}
     >
       Compre agora
