@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ReactNode } from 'react';
+import { FaCircleInfo } from 'react-icons/fa6';
 
 import { SearchForm } from '../cells';
 
@@ -20,6 +21,7 @@ export function Header({}: HeaderProps) {
 
         <div className="flex">
           <Link href="/about" className="btn btn-primary btn-sm">
+            <FaCircleInfo className="h-4 w-4" />
             Informações
           </Link>
         </div>
