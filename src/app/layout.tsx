@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   keywords: [
     'cirurgia',
     'oftalmológica',
+    'oftalmológicos',
     'materiais',
     'qualidade',
     'oftalmologia',
