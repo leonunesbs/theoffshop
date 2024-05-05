@@ -1,5 +1,7 @@
 import '@/styles/globals.css';
 
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
+import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata, Viewport } from 'next';
 import { Rubik } from 'next/font/google';
@@ -118,7 +120,6 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const className = rubik.className;
-  console.log(className);
   return (
     <html lang="pt-BR">
       <Head>
@@ -142,9 +143,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Content>{children}</Content>
           <Footer />
         </div>
-        {/* <GoogleAnalytics gaId="G-TLQGN5157J" />
+        <GoogleAnalytics gaId="G-TLQGN5157J" />
         <GoogleTagManager gtmId="GTM-MVNL439Q" />
-      <Analytics /> */}
+        <Analytics />
         <SpeedInsights />
       </body>
     </html>
