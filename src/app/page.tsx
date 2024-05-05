@@ -67,9 +67,9 @@ export default function Home({
 
   return (
     <section>
-      <h2 className="text-2xl font-semibold text-center mb-8">
+      <h1 className="text-2xl font-semibold text-center mb-8">
         {categories.find((category) => category.slug == searchParams?.category)?.title}
-      </h2>
+      </h1>
       {searchParams?.search && (
         <p className="mb-4">Mostrando resultados de busca: &ldquo;{searchParams.search}&rdquo;</p>
       )}

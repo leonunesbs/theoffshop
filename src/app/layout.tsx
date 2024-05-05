@@ -1,7 +1,5 @@
 import '@/styles/globals.css';
 
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
-import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata, Viewport } from 'next';
 import { Rubik } from 'next/font/google';
@@ -27,7 +25,7 @@ export const metadata: Metadata = {
     template: '%s - THE OFFSHOP',
     default: `THE OFFSHOP - Loja da Cirurgia Oftalmológica`,
   },
-  description: `Encontre materiais cirúrgicos oftalmológicos de qualidade para sua rotina diária.`,
+  description: 'Encontre materiais cirúrgicos oftalmológicos de qualidade para sua rotina diária.',
   category: 'ecommerce',
   generator: '@leonunesbs',
   applicationName: `THE OFFSHOP - Loja da Cirurgia Oftalmológica`,
@@ -120,31 +118,33 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const className = rubik.className;
-
+  console.log(className);
   return (
     <html lang="pt-BR">
       <Head>
         <script type="application/ld+json">{JSON.stringify(schemaOrgJsonLd)}</script>
       </Head>
-      <body className={className}>
-        {/* <div className="flex justify-center bg-base-300 dark:bg-white text-base-300">
+      <body>
+        <div className={className}>
+          {/* <div className="flex justify-center bg-base-300 dark:bg-white text-base-300">
           <Link className="btn btn-link btn-sm no-underline" href={'/'}>
-            Acesse aqui nosso guia de compras!
+          Acesse aqui nosso guia de compras!
           </Link>
         </div> */}
-        <Header />
-        <CategoriesBar.Root>
-          {categories.map((category) => (
-            <CategoriesBar.Item key={category.slug} href={category.href}>
-              {category.title}
-            </CategoriesBar.Item>
-          ))}
-        </CategoriesBar.Root>
-        <Content>{children}</Content>
-        <Footer />
-        <GoogleAnalytics gaId="G-TLQGN5157J" />
+          <Header />
+          <CategoriesBar.Root>
+            {categories.map((category) => (
+              <CategoriesBar.Item key={category.slug} href={category.href}>
+                {category.title}
+              </CategoriesBar.Item>
+            ))}
+          </CategoriesBar.Root>
+          <Content>{children}</Content>
+          <Footer />
+        </div>
+        {/* <GoogleAnalytics gaId="G-TLQGN5157J" />
         <GoogleTagManager gtmId="GTM-MVNL439Q" />
-        <Analytics />
+      <Analytics /> */}
         <SpeedInsights />
       </body>
     </html>
