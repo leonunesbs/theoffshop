@@ -1,22 +1,14 @@
 'use client';
 
-import { sendGAEvent } from '@next/third-parties/google';
 import Link, { LinkProps } from 'next/link';
 
 interface ProductCardBuyNowProps extends LinkProps {
   href: string;
-  productTitle: string;
 }
 
-export function ProductCardBuyNow({ href, productTitle, ...rest }: ProductCardBuyNowProps) {
+export function ProductCardBuyNow({ href, ...rest }: ProductCardBuyNowProps) {
   return (
-    <Link
-      className="btn btn-primary"
-      href={href}
-      target="_blank"
-      onClick={() => sendGAEvent({ event: 'generate_lead', value: `Buy now: ${productTitle}` })}
-      {...rest}
-    >
+    <Link className="btn btn-primary" href={href} target="_blank" {...rest}>
       Compre agora
     </Link>
   );

@@ -87,7 +87,7 @@ export default function Home({
               <div className="flex justify-between">
                 <Image src="aliexpress_logo.svg" alt="Aliexpress Logo" width={80} height={30} />
                 <ProductCard.Actions>
-                  <ProductCard.BuyNow href={productUrl} productTitle={name} />
+                  <ProductCard.BuyNow href={productUrl} />
                 </ProductCard.Actions>
               </div>
             </ProductCard.Content>

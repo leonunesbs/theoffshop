@@ -13,6 +13,7 @@ export function ProductCardImage({ src, alt }: ProductCardImageProps) {
         fill
         src={src}
         quality={60}
+        sizes="350x350"
       />
     </div>
   );

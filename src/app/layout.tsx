@@ -1,6 +1,6 @@
 import '@/styles/globals.css';
 
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { Analytics } from '@vercel/analytics/react';
 import { Metadata, Viewport } from 'next';
 import { Rubik } from 'next/font/google';
 
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      'favicon.ico',
+      '/favicon/favicon.ico',
       {
         url: '/favicon/favicon-32x32.png',
         sizes: '32x32',
@@ -118,9 +118,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </CategoriesBar.Item>
           ))}
         </CategoriesBar.Root>
-        <GoogleAnalytics gaId="G-TLQGN5157J" />
         <Content>{children}</Content>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
