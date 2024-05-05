@@ -27,7 +27,7 @@ const About = () => {
       <h2>Contato</h2>
       <p>
         Se você tem alguma dúvida ou precisa de ajuda, sinta-se livre para entrar em contato:{' '}
-        <Link href="mailto:support@theoffshop.com.br">support@theoffshop.com.br</Link>.
+        <Link href="mailto:suporte.theoffshop@gmail.com">suporte.theoffshop@gmail.com</Link>.
       </p>
     </div>
   );
