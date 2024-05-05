@@ -3,11 +3,22 @@ import '@/styles/globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata, Viewport } from 'next';
 import { Rubik } from 'next/font/google';
+import Head from 'next/head';
 
 import { CategoriesBar, Content, Footer, Header } from '@/components/organisms';
 import { categories } from '@/libs/utils';
 
 const rubik = Rubik({ subsets: ['latin'], weight: ['900', '800', '700', '600', '500', '400', '300'] });
+
+const schemaOrgJsonLd = {
+  '@context': 'http://schema.org',
+  '@type': 'Store',
+  name: 'THE OFFSHOP - Loja da Cirurgia Oftalmológica',
+  description: 'Encontre materiais cirúrgicos oftalmológicos de qualidade para sua rotina diária.',
+  url: 'https://theoffshop.com.br',
+  logo: 'https://theoffshop.com.br/favicon/apple-touch-icon.png',
+  currency: 'BRL',
+};
 
 export const metadata: Metadata = {
   title: {
@@ -87,10 +98,10 @@ export const metadata: Metadata = {
     title: 'THE OFFSHOP',
     statusBarStyle: 'black-translucent',
   },
-
   other: {
     applicationName: 'THE OFFSHOP',
     msapplicationTileColor: '#ebebeb',
+    'application/ld+json': JSON.stringify(schemaOrgJsonLd),
   },
 };
 
@@ -107,8 +118,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const className = rubik.className;
+
   return (
     <html lang="pt-BR">
+      <Head>
+        <script type="application/ld+json">{JSON.stringify(schemaOrgJsonLd)}</script>
+      </Head>
       <body className={className}>
         {/* <div className="flex justify-center bg-base-300 dark:bg-white text-base-300">
           <Link className="btn btn-link btn-sm no-underline" href={'/'}>
