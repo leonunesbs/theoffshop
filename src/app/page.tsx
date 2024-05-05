@@ -21,7 +21,7 @@ export async function generateMetadata({
     };
   } else if (searchParams?.search) {
     return {
-      title: 'Busca - THE OFFSHOP',
+      title: `Busca: "${searchParams.search}" - THE OFFSHOP`,
     };
   } else {
     return {};
