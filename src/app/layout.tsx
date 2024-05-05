@@ -5,7 +5,6 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata, Viewport } from 'next';
 import { Rubik } from 'next/font/google';
-import Head from 'next/head';
 
 import { CategoriesBar, Content, Footer, Header } from '@/components/organisms';
 import { categories } from '@/libs/utils';
@@ -122,9 +121,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const className = rubik.className;
   return (
     <html lang="pt-BR">
-      <Head>
-        <script type="application/ld+json">{JSON.stringify(schemaOrgJsonLd)}</script>
-      </Head>
       <body>
         <div className={className}>
           {/* <div className="flex justify-center bg-base-300 dark:bg-white text-base-300">
