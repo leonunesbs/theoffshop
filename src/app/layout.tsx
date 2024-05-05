@@ -1,6 +1,7 @@
 import '@/styles/globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata, Viewport } from 'next';
 import { Rubik } from 'next/font/google';
 import Head from 'next/head';
@@ -141,6 +142,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Content>{children}</Content>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
