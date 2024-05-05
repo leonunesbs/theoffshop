@@ -12,6 +12,7 @@ export function ProductCardImage({ src, alt }: ProductCardImageProps) {
         }}
         fill
         src={src}
+        quality={60}
       />
     </div>
   );

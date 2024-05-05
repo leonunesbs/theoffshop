@@ -6,7 +6,11 @@ interface ProductCardRootProps {
 
 export function ProductCardRoot({ children }: ProductCardRootProps) {
   return (
-    <div className="card card-compact w-full bg-base-100 dark:bg-base-200 dark:shadow-none shadow overflow-hidden">
+    <div
+      className="card card-compact w-full bg-base-100 dark:bg-base-200 dark:shadow-none shadow overflow-hidden"
+      itemScope
+      itemType="https://schema.org/Offer"
+    >
       {children}
     </div>
   );

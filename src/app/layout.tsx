@@ -117,6 +117,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </CategoriesBar.Item>
           ))}
         </CategoriesBar.Root>
+        {/* <GoogleAnalytics gaId="G-TLQGN5157J" /> */}
         <Content>{children}</Content>
         <Footer />
       </body>
