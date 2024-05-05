@@ -9,7 +9,7 @@ interface CategoryItemProps extends LinkProps {
 export function CategoryItem({ children, href, ...rest }: CategoryItemProps) {
   return (
     <Link href={href} className="btn btn-primary btn-ghost" {...rest}>
-      {children}
+      <h2>{children}</h2>
     </Link>
   );
 }
