@@ -1,5 +1,6 @@
 import '@/styles/globals.css';
 
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Metadata, Viewport } from 'next';
 import { Rubik } from 'next/font/google';
 
@@ -117,7 +118,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </CategoriesBar.Item>
           ))}
         </CategoriesBar.Root>
-        {/* <GoogleAnalytics gaId="G-TLQGN5157J" /> */}
+        <GoogleAnalytics gaId="G-TLQGN5157J" />
         <Content>{children}</Content>
         <Footer />
       </body>
