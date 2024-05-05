@@ -14,12 +14,16 @@ export const metadata: Metadata = {
     template: '%s - THE OFFSHOP',
     default: `THE OFFSHOP - Loja da Cirurgia Oftalmológica`,
   },
-  description: `Material cirúrgico oftalmológico de qualidade para o seu dia a dia`,
+  description: `Encontre materiais cirúrgicos oftalmológicos de qualidade para sua rotina diária.`,
   category: 'ecommerce',
   generator: '@leonunesbs',
   applicationName: `THE OFFSHOP - Loja da Cirurgia Oftalmológica`,
   referrer: 'origin-when-cross-origin',
   keywords: [
+    'cirurgia',
+    'oftalmológica',
+    'materiais',
+    'qualidade',
     'oftalmologia',
     'cirurgia oftalmo',
     'material cirúrgico',
@@ -42,7 +46,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'THE OFFSHOP - Loja da Cirurgia Oftalmológica',
-    description: `Material cirúrgico oftalmológico de qualidade para o seu dia a dia.`,
+    description: `Encontre materiais cirúrgicos oftalmológicos de qualidade para sua rotina diária..`,
     url: 'https://theoffshop.com.br',
     siteName: `THE OFFSHOP`,
     images: [
