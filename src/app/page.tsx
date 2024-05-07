@@ -104,7 +104,7 @@ export default function Home({
               «
             </Link>
           ) : (
-            <Link href={'/'} className={'join-item btn btn-ghost invisibleg'}>
+            <Link href={'/'} className={'join-item btn btn-ghost invisible'}>
               «
             </Link>
           )}
@@ -117,7 +117,7 @@ export default function Home({
               »
             </Link>
           ) : (
-            <Link href={'/'} className={'join-item btn btn-ghost invisibleg'}>
+            <Link href={'/'} className={'join-item btn btn-ghost invisible'}>
               »
             </Link>
           )}

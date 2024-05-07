@@ -109,29 +109,29 @@
   },
   {
     "id": 12,
-    "name": "Blefaroestato regulável 2",
+    "name": "Blefarostato regulável 2",
     "description": "Ajuste o grau de abertura palepbral.",
     "imageUrls": ["https://ae01.alicdn.com/kf/Sf827e1bfa408426fadc0815c06cb5fc7Y.jpg_400x400.jpg"],
     "price": 99,
-    "categories": ["especiais", "blefaroestato"],
+    "categories": ["especiais", "blefarostato"],
     "productUrl": "https://s.click.aliexpress.com/e/_DED7Qh9"
   },
   {
     "id": 13,
-    "name": "Blefaroestato regulável 3",
+    "name": "Blefarostato regulável 3",
     "description": "Ajuste o grau de abertura palepbral.",
     "imageUrls": ["https://ae01.alicdn.com/kf/Sbc23ffb88e0b45baac55934d52761a1eM.jpg_400x400.jpg"],
     "price": 99,
-    "categories": ["especiais", "blefaroestato"],
+    "categories": ["especiais", "blefarostato"],
     "productUrl": "https://s.click.aliexpress.com/e/_DEMn68T"
   },
   {
     "id": 14,
-    "name": "Blefaroestato regulável 1",
+    "name": "Blefarostato regulável 1",
     "description": "Ajuste o grau de abertura palepbral.",
     "imageUrls": ["https://ae01.alicdn.com/kf/He02bc90cf0d7448d9182001d22e4312aH.jpg_400x400.jpg"],
     "price": 99,
-    "categories": ["especiais", "blefaroestato"],
+    "categories": ["especiais", "blefarostato"],
     "productUrl": "https://s.click.aliexpress.com/e/_DcuhPrH"
   }
 ]
