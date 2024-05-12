@@ -45,15 +45,13 @@ export default function Home({
         const normalizedSearch = normalizeText(searchParams.search);
         return (
           normalizeText(product.name).includes(normalizedSearch) ||
-          product.price.toString().includes(normalizedSearch) ||
           product.categories.some((category) => normalizeText(category).includes(normalizedSearch))
         );
       })
     : mainCatalog;
 
-  const catalog = (searchParams?.search ? filteredCatalog : mainCatalog).sort((a, b) => {
-    return normalizeText(a.name).localeCompare(normalizeText(b.name));
-  });
+  const catalog = (searchParams?.search ? filteredCatalog : mainCatalog).sort(() => Math.random() - 0.5);
+
   const products = searchParams?.category
     ? catalog.filter(({ categories }) => categories.includes(searchParams?.category))
     : catalog;
@@ -74,15 +72,13 @@ export default function Home({
         <p className="mb-4">Mostrando resultados de busca: &ldquo;{searchParams.search}&rdquo;</p>
       )}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
-        {selectedProducts.map(({ id, name, imageUrls, productUrl, description }) => (
+        {selectedProducts.map(({ id, name, productUrl, description }) => (
           <ProductCard.Root key={id}>
-            <div className="carousel w-full bg-base-300 h-[300px]">
-              {imageUrls.map((src) => (
-                <ProductCard.Image key={src} src={src} alt={name} />
-              ))}
-            </div>
+            <ProductCard.Carrousel itemId={id} />
+
             <ProductCard.Content>
               <ProductCard.Title title={name} />
+              <ProductCard.Price itemId={id} />
               <ProductCard.Description>{description}</ProductCard.Description>
               <div className="flex justify-between">
                 <Image src="aliexpress_logo.svg" alt="Aliexpress Logo" width={80} height={30} />

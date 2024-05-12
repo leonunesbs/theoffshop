@@ -5,5 +5,5 @@ interface ProductCardContentProps {
 }
 
 export function ProductCardContent({ children }: ProductCardContentProps) {
-  return <div className="card-body">{children}</div>;
+  return <div className="card-body justify-between">{children}</div>;
 }
