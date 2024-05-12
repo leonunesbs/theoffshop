@@ -1,31 +1,38 @@
-import { redirect } from 'next/navigation';
+'use client';
+
+import { redirect, useParams, useRouter } from 'next/navigation';
 import { ReactNode } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
 
 interface SearchFormProps {
   children?: ReactNode;
 }
 
 export function SearchForm({}: SearchFormProps) {
-  const onSubmit = async (formData: FormData) => {
-    'use server';
-    const searchString = formData.get('searchString');
+  const { category } = useParams();
+  console.log(category);
+  const router = useRouter();
+  const { handleSubmit, register } = useForm<{
+    searchString: string;
+  }>();
+  const onSubmit: SubmitHandler<{ searchString: string }> = async ({ searchString }) => {
     if (!searchString) redirect('/');
-    redirect(`/?search=${searchString}`);
+    category ? router.push(`/${category}?search=${searchString}`) : router.push(`/?search=${searchString}`);
   };
   return (
-    <form action={onSubmit} className="flex grow">
+    <form onSubmit={handleSubmit(onSubmit)} className="flex grow">
       <label
         htmlFor="searchString"
         className="input input-bordered items-center pr-0 gap-2 grow flex join"
         aria-label="Digite aqui a sua busca"
       >
         <input
+          id="searchString"
           type="text"
           placeholder="busque aqui seu material cirúrgico"
           aria-placeholder="busque aqui seu material cirúrgico"
           className="grow join-item"
-          name="searchString"
-          id="searchString"
+          {...register('searchString')}
         />
         <button type="submit" className="join-item btn btn-ghost" aria-label="buscar">
           <svg
