@@ -39,7 +39,7 @@ export async function ProductCardCarousel({ itemId }: ProductCardCarouselProps) 
               loading={i > 2 ? 'lazy' : 'eager'}
               fill
               src={url}
-              quality={50}
+              quality={100}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
