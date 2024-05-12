@@ -9,7 +9,7 @@ export async function ProductCardPrice({ itemId }: ProductCardPriceProps) {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '877af531f3msh0f61fe6c3d1bb3ap1ba315jsn0556c756e673',
+        'X-RapidAPI-Key': process.env.RAPID_APIKEY as string,
         'X-RapidAPI-Host': 'aliexpress-datahub.p.rapidapi.com',
       },
     };
