@@ -3,7 +3,7 @@ import Image from 'next/image';
 interface ProductCardCarouselProps {
   itemId: number;
 }
-//
+
 export async function ProductCardCarousel({ itemId }: ProductCardCarouselProps) {
   async function fetchImages(itemId: number) {
     'use server';

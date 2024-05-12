@@ -1,7 +1,7 @@
 'use client';
 
-import { redirect, useParams, useRouter } from 'next/navigation';
-import { ReactNode } from 'react';
+import { redirect, useParams, useRouter, useSearchParams } from 'next/navigation';
+import { ReactNode, useEffect } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 interface SearchFormProps {
@@ -10,13 +10,18 @@ interface SearchFormProps {
 
 export function SearchForm({}: SearchFormProps) {
   const { category } = useParams();
-  console.log(category);
+  const searchParams = useSearchParams();
   const router = useRouter();
-  const { handleSubmit, register } = useForm<{
+  const { handleSubmit, register, reset } = useForm<{
     searchString: string;
   }>();
+  useEffect(() => {
+    !searchParams.get('searchString') && reset();
+  }, [reset, searchParams]);
+
   const onSubmit: SubmitHandler<{ searchString: string }> = async ({ searchString }) => {
     if (!searchString) redirect('/');
+
     category ? router.push(`/${category}?search=${searchString}`) : router.push(`/?search=${searchString}`);
   };
   return (
