@@ -28,14 +28,15 @@ export async function ProductCardCarrousel({ itemId }: ProductCardCarrouselProps
   return (
     <div className="carousel w-full bg-base-300 h-[300px]">
       {(await fetchImages(itemId)).map((imageUrl, i) => {
-        const url = `https://${imageUrl.split('//')[1]}`;
+        const url = `https://${imageUrl.split('//')[1]}_400x400.jpg`;
         return (
-          <div key={`${imageUrl} ${i}`} className="carousel-item relative w-full h-full">
+          <div key={`${imageUrl} ${i}`} className="carousel-item relative w-[350px] h-full">
             <Image
               alt={`${imageUrl} ${i}`}
               style={{
                 objectFit: 'contain',
               }}
+              loading={i > 2 ? 'lazy' : 'eager'}
               fill
               src={url}
               quality={50}
