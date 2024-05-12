@@ -1,9 +1,9 @@
 interface ProductCardPriceProps {
-  itemId: number;
+  itemId: bigint;
 }
 
 export async function ProductCardPrice({ itemId }: ProductCardPriceProps) {
-  async function fetchPrice(itemId: number) {
+  async function fetchPrice(itemId: bigint) {
     'use server';
     const url = `https://aliexpress-datahub.p.rapidapi.com/item_detail_2?itemId=${itemId}&currency=BRL&region=BR&locale=pt_BR`;
     const options = {

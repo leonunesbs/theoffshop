@@ -1,11 +1,11 @@
 import Image from 'next/image';
 
 interface ProductCardCarouselProps {
-  itemId: number;
+  itemId: bigint;
 }
 
 export async function ProductCardCarousel({ itemId }: ProductCardCarouselProps) {
-  async function fetchImages(itemId: number) {
+  async function fetchImages(itemId: bigint) {
     'use server';
     const url = `https://aliexpress-datahub.p.rapidapi.com/item_detail_simple?itemId=${itemId}&currency=BRL&region=BR&locale=pt_BR`;
     const options = {
