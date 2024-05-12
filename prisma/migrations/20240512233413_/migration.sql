@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Product" ALTER COLUMN "refId" SET DATA TYPE BIGINT;

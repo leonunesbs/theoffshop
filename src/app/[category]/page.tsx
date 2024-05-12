@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { Metadata } from 'next/types';
 
 import { ProductCard } from '@/components/organisms';
+import { prisma } from '@/libs/prisma';
 import { categories, normalizeText } from '@/libs/utils';
-import mainCatalog from '@/public/catalog.json';
 
 export async function generateMetadata({
   params,
@@ -31,7 +31,7 @@ export async function generateMetadata({
   }
 }
 
-export default function Category({
+export default async function Category({
   searchParams,
   params,
 }: {
@@ -45,7 +45,7 @@ export default function Category({
 }) {
   const itemsPerPage = 12;
   const page = parseInt(searchParams?.page?.toString() || '1');
-
+  const mainCatalog = await prisma.product.findMany();
   const filteredCatalog = searchParams?.search
     ? mainCatalog.filter((product) => {
         const normalizedSearch = normalizeText(searchParams.search);
@@ -78,13 +78,13 @@ export default function Category({
         <p className="mb-4">Mostrando resultados de busca: &ldquo;{searchParams.search}&rdquo;</p>
       )}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
-        {selectedProducts.map(({ id, name, productUrl, description }) => (
+        {selectedProducts.map(({ id, refId, name, productUrl, description }) => (
           <ProductCard.Root key={id}>
-            <ProductCard.Carousel itemId={id} />
+            <ProductCard.Carousel itemId={refId} />
 
             <ProductCard.Content>
               <ProductCard.Title title={name} />
-              <ProductCard.Price itemId={id} />
+              <ProductCard.Price itemId={refId} />
               <ProductCard.Description>{description}</ProductCard.Description>
               <div className="flex justify-between">
                 <Image src="aliexpress_logo.svg" alt="Aliexpress Logo" width={80} height={30} />
