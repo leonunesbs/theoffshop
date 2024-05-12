@@ -26,7 +26,7 @@ export async function ProductCardCarrousel({ itemId }: ProductCardCarrouselProps
     }
   }
   return (
-    <div className="carousel w-full bg-base-300 h-[270px]">
+    <div className="carousel w-full bg-base-300 h-[300px]">
       {(await fetchImages(itemId)).map((imageUrl, i) => {
         const url = `https://${imageUrl.split('//')[1]}`;
         return (
