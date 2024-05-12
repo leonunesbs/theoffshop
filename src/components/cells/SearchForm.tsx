@@ -12,7 +12,7 @@ export function SearchForm({}: SearchFormProps) {
   const { category } = useParams();
   const searchParams = useSearchParams();
   const router = useRouter();
-  const { handleSubmit, register, reset } = useForm<{
+  const { handleSubmit, register, reset, setValue } = useForm<{
     searchString: string;
   }>();
 
@@ -22,8 +22,9 @@ export function SearchForm({}: SearchFormProps) {
     category ? router.push(`/${category}?search=${searchString}`) : router.push(`/?search=${searchString}`);
   };
   useEffect(() => {
-    !searchParams.get('searchString') && reset();
-  }, [reset, searchParams]);
+    const searchString = searchParams.get('searchString');
+    !searchString ? reset() : setValue('searchString', searchString);
+  }, [reset, searchParams, setValue]);
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex grow">
       <label
