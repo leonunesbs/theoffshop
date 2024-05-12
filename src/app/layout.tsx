@@ -1,6 +1,6 @@
 import '@/styles/globals.css';
 
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata, Viewport } from 'next';
@@ -142,7 +142,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </div>
         <GoogleAnalytics gaId="G-TLQGN5157J" />
-        <GoogleTagManager gtmId="GTM-MVNL439Q" />
+        {/* <GoogleTagManager gtmId="GTM-MVNL439Q" /> */}
         <Analytics />
         <SpeedInsights />
       </body>

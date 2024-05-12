@@ -40,7 +40,7 @@ export async function ProductCardCarrousel({ itemId }: ProductCardCarrouselProps
               fill
               src={url}
               quality={50}
-              sizes="350x350"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         );
