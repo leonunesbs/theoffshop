@@ -117,6 +117,8 @@ export const viewport: Viewport = {
   // interactiveWidget: 'resizes-visual',
 };
 
+export const revalidate = 3600 * 24 * 7;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const className = rubik.className;
   return (
