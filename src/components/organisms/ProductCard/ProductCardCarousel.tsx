@@ -28,7 +28,7 @@ export async function ProductCardCarousel({ itemId }: ProductCardCarouselProps) 
   return (
     <div className="carousel carousel-center w-full bg-base-300 h-[300px]">
       {(await fetchImages(itemId)).map((imageUrl, i) => {
-        const url = `https://${imageUrl.split('//')[1]}_400x400.jpg`;
+        const url = `https://${imageUrl.split('//')[1]}_350x350.jpg`;
         return (
           <div key={`${imageUrl} ${i}`} className="carousel-item relative w-full h-full">
             <Image
