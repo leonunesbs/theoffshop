@@ -15,15 +15,15 @@ export function SearchForm({}: SearchFormProps) {
   const { handleSubmit, register, reset } = useForm<{
     searchString: string;
   }>();
-  useEffect(() => {
-    !searchParams.get('searchString') && reset();
-  }, [reset, searchParams]);
 
   const onSubmit: SubmitHandler<{ searchString: string }> = async ({ searchString }) => {
     if (!searchString) redirect('/');
 
     category ? router.push(`/${category}?search=${searchString}`) : router.push(`/?search=${searchString}`);
   };
+  useEffect(() => {
+    !searchParams.get('searchString') && reset();
+  }, [reset, searchParams]);
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex grow">
       <label
