@@ -1,6 +1,6 @@
 import { ProductCardActions } from './ProductCardActions';
 import { ProductCardBuyNow } from './ProductCardBuyNow';
-import { ProductCardCarrousel } from './ProductCardCarrousel';
+import { ProductCardCarousel } from './ProductCardCarousel';
 import { ProductCardContent } from './ProductCardContent';
 import { ProductCardDescription } from './ProductCardDescription';
 import { ProductCardImage } from './ProductCardImage';
@@ -11,7 +11,7 @@ import { ProductCardTitle } from './ProductCardTitle';
 export const ProductCard = {
   Root: ProductCardRoot,
   Image: ProductCardImage,
-  Carrousel: ProductCardCarrousel,
+  Carousel: ProductCardCarousel,
   Content: ProductCardContent,
   Title: ProductCardTitle,
   Description: ProductCardDescription,

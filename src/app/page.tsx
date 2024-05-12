@@ -74,7 +74,7 @@ export default function Home({
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
         {selectedProducts.map(({ id, name, productUrl, description }) => (
           <ProductCard.Root key={id}>
-            <ProductCard.Carrousel itemId={id} />
+            <ProductCard.Carousel itemId={id} />
 
             <ProductCard.Content>
               <ProductCard.Title title={name} />

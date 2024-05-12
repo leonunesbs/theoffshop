@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
-interface ProductCardCarrouselProps {
+interface ProductCardCarouselProps {
   itemId: number;
 }
 //
-export async function ProductCardCarrousel({ itemId }: ProductCardCarrouselProps) {
+export async function ProductCardCarousel({ itemId }: ProductCardCarouselProps) {
   async function fetchImages(itemId: number) {
     'use server';
     const url = `https://aliexpress-datahub.p.rapidapi.com/item_detail_simple?itemId=${itemId}&currency=BRL&region=BR&locale=pt_BR`;
@@ -26,11 +26,11 @@ export async function ProductCardCarrousel({ itemId }: ProductCardCarrouselProps
     }
   }
   return (
-    <div className="carousel w-full bg-base-300 h-[300px]">
+    <div className="carousel carousel-center w-full bg-base-300 h-[300px]">
       {(await fetchImages(itemId)).map((imageUrl, i) => {
         const url = `https://${imageUrl.split('//')[1]}_400x400.jpg`;
         return (
-          <div key={`${imageUrl} ${i}`} className="carousel-item relative w-[350px] h-full">
+          <div key={`${imageUrl} ${i}`} className="carousel-item relative w-full h-full">
             <Image
               alt={`${imageUrl} ${i}`}
               style={{
