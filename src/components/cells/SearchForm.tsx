@@ -22,7 +22,7 @@ export function SearchForm({}: SearchFormProps) {
     category ? router.push(`/${category}?search=${searchString}`) : router.push(`/?search=${searchString}`);
   };
   useEffect(() => {
-    const searchString = searchParams.get('searchString');
+    const searchString = searchParams.get('search');
     !searchString ? reset() : setValue('searchString', searchString);
   }, [reset, searchParams, setValue]);
   return (
