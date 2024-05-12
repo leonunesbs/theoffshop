@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ReactNode } from 'react';
+import { ReactNode, Suspense } from 'react';
 import { FaCircleInfo } from 'react-icons/fa6';
 
 import { SearchForm } from '../cells';
@@ -15,9 +15,11 @@ export function Header({}: HeaderProps) {
         <Link href="/">
           <span className="text-xl sm:text-2xl font-black whitespace-nowrap">THE OFFSHOP</span>
         </Link>
-        <div className="hidden sm:flex grow justify-center max-w-2xl">
-          <SearchForm />
-        </div>
+        <Suspense fallback={<>Loading...</>}>
+          <div className="hidden sm:flex grow justify-center max-w-2xl">
+            <SearchForm />
+          </div>
+        </Suspense>
 
         <div className="flex">
           <Link href="/about" className="btn btn-primary btn-sm">
@@ -26,9 +28,11 @@ export function Header({}: HeaderProps) {
           </Link>
         </div>
       </div>
-      <div className="flex sm:hidden grow justify-center max-w-2xl">
-        <SearchForm />
-      </div>
+      <Suspense fallback={<>Loading...</>}>
+        <div className="flex sm:hidden grow justify-center max-w-2xl">
+          <SearchForm />
+        </div>
+      </Suspense>
     </header>
   );
 }
